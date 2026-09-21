@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="TykaYurt — sabores de iogurte natural artesanal em Curitiba. Veja Morango, Amora e Abacaxi."
+    />
+    <title>TykaYurt | Sabores</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand-block">
+          <span class="brand-badge">TykaYurt</span>
+          <span class="brand-sub">iogurte artesanal</span>
+        </div>
+        <a class="topbar-link" href="https://wa.me/554191731323?text=Oi!%20Quero%20pedir%20um%20TykaYurt" target="_blank" rel="noreferrer">
+          Pedir no WhatsApp
+        </a>
+      </header>
+
+      <main class="showcase">
+        <section class="intro">
+          <p class="eyebrow">Nossos sabores</p>
+          <h1>Sabores de iogurte natural</h1>
+          <p class="subtitle">
+            Base cremosa, geleia de fruta real e produção pequena pra manter a qualidade e o sabor marcante.
+          </p>
+        </section>
+
+        <nav class="flavor-tabs" aria-label="Sabores disponíveis"></nav>
+
+        <section class="product-panel" aria-live="polite">
+          <div class="product-art">
+            <img id="product-image" src="./images/morango-sabor.svg" alt="Pote de iogurte artesanal sabor Morango" />
+          </div>
+
+          <div class="product-copy">
+            <p id="product-tag" class="tagline">O carro-chefe</p>
+            <h2 id="product-name">Morango</h2>
+            <p id="product-description" class="description">
+              Morango de verdade, sentido em cada colherada. A geleia é feita com fruta de verdade, não com xarope — por isso o sabor é limpo, fresco, sem aquele doce artificial que a gente já cansou de comer.
+            </p>
+
+            <div class="price-row">
+              <span id="product-price" class="price">R$ 20</span>
+              <div class="product-meta">
+                <strong id="product-size">500 ml</strong>
+                <span id="product-note">tamanho família</span>
+              </div>
+            </div>
+
+            <div class="actions">
+              <a id="order-link" class="order-button" href="https://wa.me/554191731323?text=Oi!%20Quero%20pedir%20um%20TykaYurt%20de%20Morango%20de%20500%20ml%20(R%24%2020)." target="_blank" rel="noreferrer">
+                Pedir agora
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="order-card" aria-label="Formulário de pedido pelo WhatsApp">
+          <div class="order-header">
+            <p class="eyebrow">Pedido rápido</p>
+            <h3>Escolha seu sabor e envie direto</h3>
+          </div>
+
+          <form id="order-form" class="order-form">
+            <div class="quick-flavor-field">
+              <span class="field-label">Sabor</span>
+              <button type="button" class="flavor-choice-button" aria-label="Selecionar sabor">
+                <span class="choice-left">
+                  <span class="choice-label">Morango</span>
+                </span>
+                <span class="choice-caret">⌄</span>
+              </button>
+              <div id="quick-flavor-grid" class="quick-flavor-grid" aria-label="Lista de sabores"></div>
+              <select id="flavor-select" name="flavor" class="sr-only" aria-label="Selecionar sabor"></select>
+            </div>
+
+            <div class="quantity-field">
+              <span class="field-label">Quantidade</span>
+              <div class="quantity-stepper" aria-label="Selecionar quantidade">
+                <button type="button" class="quantity-button" data-action="decrease" aria-label="Diminuir quantidade">−</button>
+                <input id="quantity-input" name="quantity" type="number" min="1" max="20" value="1" readonly />
+                <button type="button" class="quantity-button" data-action="increase" aria-label="Aumentar quantidade">+</button>
+              </div>
+            </div>
+
+            <label>
+              <span>Observações</span>
+              <textarea id="notes-input" name="notes" rows="3" placeholder="Ex.: quero retirar hoje, entregar em Curitiba, precisa de entrega etc."></textarea>
+            </label>
+
+            <button type="submit" class="form-submit">Enviar pedido pelo WhatsApp</button>
+          </form>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
