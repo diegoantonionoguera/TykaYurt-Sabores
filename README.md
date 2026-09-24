@@ -1,35 +1,45 @@
 # TykaYurt | Sabores
 
-Mini apresentação comercial da TykaYurt com catálogo de sabores, preço e pedido rápido via WhatsApp.
+Landing page comercial e conversão focada para apresentação dos sabores da TykaYurt, com fluxo rápido para pedido via WhatsApp.
 
-## Como rodar
+## Objetivo
+
+Este projeto foi pensado para funcionar como uma versão isolada, compartilhável e pronta para apresentação comercial a clientes, sem depender do app principal da marca.
+
+## Funcionalidades
+
+- Catálogo visual dos sabores
+- Seleção dinâmica de sabor e quantidade
+- Mensagem pronta para WhatsApp com pedido
+- Layout premium e responsivo
+- Experiência otimizada para conversão
+
+## Stack
+
+- Vite
+- HTML
+- CSS
+- JavaScript vanilla
+
+## Como executar localmente
 
 ```bash
 npm install
-npm run dev -- --host 0.0.0.0 --port 4176
+npm run dev -- --host 0.0.0.0 --port 4174
 ```
 
-## Como buildar
+## Como gerar build de produção
 
 ```bash
 npm run build
 ```
 
-## Visão geral
+## Estrutura principal
 
-- Página focada em conversão
-- Catálogo de sabores com troca dinâmica
-- Botão de pedido direto para WhatsApp
-- Formulário rápido com sabor, quantidade e observações
-- Layout responsivo para mobile
-
-## Arquitetura
-
-- HTML + CSS + JS vanilla
-- Vite para dev/build
-- Recursos estáticos na pasta `images`
-- Integração direta por WhatsApp
+- `src/` — lógica e renderização da página
+- `images/` — ativos visuais do projeto
+- `index.html` — entrada principal da interface
 
 ## Observação
 
-A versão atual foi pensada para compartilhamento comercial e envio rápido para clientes, sem depender do app principal.
+A pasta deste projeto foi mantida separada do repositório antigo da marca, preservando o código legado para recuperação posterior sem interferir no desenvolvimento atual.
