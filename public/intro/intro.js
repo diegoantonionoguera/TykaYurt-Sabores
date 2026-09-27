@@ -117,7 +117,10 @@
     });
     video.addEventListener("ended", () => finish());
     video.addEventListener("error", () => finish());
-    video.src = new URL("logo-reveal.mp4", assetBase).href;
+    // Choose once per opening: rotation must not restart or download both videos.
+    const mobile = window.matchMedia("(max-width: 767px), (max-width: 1024px) and (pointer: coarse)").matches;
+    dialog.dataset.format = mobile ? "portrait" : "landscape";
+    video.src = new URL(mobile ? "logo-mobile-20260926.mp4" : "logo-desktop-20260926.mp4", assetBase).href;
     dialog.prepend(video);
     waitTimer = setTimeout(() => finish(), CONFIG.stallTimeoutMs);
     maximumTimer = setTimeout(() => finish(), CONFIG.maximumDurationMs);
